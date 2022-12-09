@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main ()
+{
+    const float TV =400.00;
+    const float VCR=220.00;
+    const float RC =35.20;
+    const float CDP=300.00;
+    const float TR =150.00;
+    const float TAX=.0815;
+    int n1, n2, n3, n4,n5;
+    float subtotal, tax, total, TOtv, TOvcr, TOrc, TOcdp, TOtr;
+
+    printf("No. of TV               :");
+    scanf("%d", &n1);
+    printf("\nNo. of VCR              :");
+    scanf("%d", &n2);
+    printf("\nNo. of Remote Controller:");
+    scanf("%d", &n3);
+    printf("\nNo. of CD Player        :");
+    scanf("%d", &n4);
+    printf("\nNo. of Tape Recoder     :");
+    scanf("%d", &n5);
+
+    TOtv = TV*n1;
+    TOvcr= VCR*n2;
+    TOrc = RC*n3;
+    TOcdp= CDP*n4;
+    TOtr = TR*n5;
+
+    subtotal = TOtv + TOvcr + TOrc + TOcdp + TOtr;
+    tax = subtotal*TAX;
+    total = subtotal + tax;
+
+printf ("\n QTY         DESCRIPTION            UNIT PRICE           TOTAL PRICE  ");
+printf ("\n-----       -------------          ------------         ------------- ");
+printf ("\n %d          TV                         400.00               %.2f     ",n1, TOtv);
+printf ("\n %d          VCR                        220.00               %.2f     ",n2, TOvcr);
+printf ("\n %d          Remote Controller           35.20               %.2f     ",n3, TOrc);
+printf ("\n %d          CD Player                  300.00               %.2f     ",n4, TOcdp);
+printf ("\n %d          Tape Recorder              150.00               %.2f     ",n5, TOtr);
+
+printf ("\n                                      SUBTOTAL               %.2f     ",subtotal);
+printf ("\n                                      TAX                    %.2f     ",tax);
+printf ("\n                                      TOTAL                  %.2f     ",total);
+
+return 0;
+}
